@@ -7,9 +7,7 @@ const previsao = async () =>{
         mode: 'cors',
         cache: 'default',
     };
-
-    // const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=sao&paulo&appid=f72255d6f2aeed89f1c023d7665aba87&units=metric&lang=pt_br', options);
-    //const response = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=53e7a432&city_name=Campinas,SP', options);
+ 
     const response = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=53e7a432&user_ip=remote', options);
     const json = await response.json();
     tempo.innerHTML = `Temperatura atual  ${json.results.city_name}  (${json.results.temp})°C`;
