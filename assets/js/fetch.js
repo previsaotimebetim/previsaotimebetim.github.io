@@ -8,7 +8,7 @@ const previsao = async () =>{
         cache: 'default',
     };
  
-    //const response = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=31434b6e&user_ip=remote', options);
+    const response = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=31434b6e&user_ip=remote', options);
     const json = await response.json();
     tempo.innerHTML = `Temperatura atual  ${json.results.city_name}  (${json.results.temp})°C`;
     for(let i = 1; i < json.results.forecast.length - 1; i++){
@@ -67,7 +67,7 @@ botao.addEventListener('click', async (e) =>{
         mode: 'cors',
         cache: 'default',
     }
-    //const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=31434b6e&city_name=${search}`, options);
+    const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=31434b6e&city_name=${search}`, options);
     const json = await response.json();
     tempo.innerHTML = `Tempo atual ${json.results.city_name}  (${json.results.temp})°C`;
     for(let i = 1; i < json.results.forecast.length - 1; i++){
@@ -101,7 +101,7 @@ botao.addEventListener('click', async (e) =>{
                     <p>${json.results.forecast[i].date}</p>
                     <p>${json.results.forecast[i].min}º/${json.results.forecast[i].max}º</p>
                     <img src="/assets/images/${condition}" alt="" width='64' heigth='64'>
-                    <p>${json.results.forecast[i].description}</p>
+                    ${json.results.forecast[i].description}
                     <p>${json.results.city_name}</p>
                     <p class="att">Velocidade do Vento ${json.results.forecast[i].wind_speedy}<br>Probabilidade de Chuva ${json.results.forecast[i].rain_probability}%</p>
                  </div> 
