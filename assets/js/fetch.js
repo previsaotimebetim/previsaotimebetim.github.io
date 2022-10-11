@@ -8,7 +8,7 @@ const previsao = async () =>{
         cache: 'default',
     };
  
-    const response = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=53e7a432&user_ip=remote', options);
+    const response = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=fd4e5966&user_ip=remote', options);
     const json = await response.json();
     tempo.innerHTML = `Temperatura atual  ${json.results.city_name}  (${json.results.temp})°C`;
     for(let i = 1; i < json.results.forecast.length - 1; i++){
@@ -67,7 +67,7 @@ botao.addEventListener('click', async (e) =>{
         mode: 'cors',
         cache: 'default',
     }
-    const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=53e7a432&city_name=${search}`, options);
+    const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=fd4e5966 &city_name=${search}`, options);
     const json = await response.json();
     tempo.innerHTML = `Tempo atual ${json.results.city_name}  (${json.results.temp})°C`;
     for(let i = 1; i < json.results.forecast.length - 1; i++){
