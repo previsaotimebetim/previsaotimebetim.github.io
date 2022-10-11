@@ -91,3 +91,9 @@ p.att{
     text-align: center;
     font-weight: bold;
 }
+
+@media(min-width: 768px){
+    h1{
+        text-align: center;
+    }
+}
