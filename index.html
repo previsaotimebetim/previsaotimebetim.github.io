@@ -11,8 +11,8 @@
     <header>
         <h1 id="titulo">Previsão do Tempo</h1>
         <label for="">
-            <input id="cidade" type="text" placeholder="Belo Horizonte-MG" title="Preencha nesse estilo: cidade-uf" oninvalid="this.setCustomValidity('Insira a cidade')" oninput="this.setCustomValidity('')">
-            <button id="botao">Buscar</button>
+            <input id="cidade" type="text" pattern="(?=.*[a-z]-?[a-z]{2}$)" placeholder="Belo Horizonte-MG" title="Preencha nesse estilo: cidade-uf" oninvalid="this.setCustomValidity('Insira a cidade')" oninput="this.setCustomValidity('')">
+            <button id="botao" type="submit">Buscar</button>
         </label>
     </header>
 

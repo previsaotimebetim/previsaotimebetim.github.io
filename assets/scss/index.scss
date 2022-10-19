@@ -4,6 +4,9 @@ header{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    & > h1{
+        text-align: center;
+    }
     & > label{
         display: flex;
         flex-direction: column;
@@ -41,19 +44,28 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    height: 100vh;
+    height: 70vh;
+    width: 100%;
+    overflow-X: auto;
+    flex-wrap: nowrap;
+    &::-webkit-scrollbar{
+        width: 6px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 100%);
+        border-radius: 10px;
+    }
     & h2{
         font-size: 1em;
     }
 }
 
-main > div.container{
-    display: flex;
-    align-items: flex-start;
+// div.container{
+//     display: flex;
+//     flex-direction: col;
+//     align-items: flex-start;
     
-    
-}
+// }
 
 div.card{
     margin-top: 10px;
@@ -92,8 +104,15 @@ p.att{
     font-weight: bold;
 }
 
-@media(min-width: 768px){
-    h1{
-        text-align: center;
+@media(min-width: 1200px){
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-wrap: wrap;
+        & h2{
+            font-size: 1em;
+        }
     }
 }

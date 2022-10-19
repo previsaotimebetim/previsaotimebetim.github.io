@@ -1,6 +1,14 @@
 const tempo = document.querySelector('#titulo');
 const cidade = document.querySelector('#cidade')
 const botao = document.querySelector('#botao');
+
+function eventBotao(){
+    return cidade.style.border = '1px solid red';
+    botao.style.backgroundColor = '#ff0000';
+}
+
+botao.addEventListener('input', eventBotao);
+
 const previsao = async () =>{
     const options = {
         method: 'GET',
