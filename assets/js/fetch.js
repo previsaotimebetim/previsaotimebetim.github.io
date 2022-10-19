@@ -18,7 +18,7 @@ const previsao = async () =>{
  
     const response = await fetch('https://api.hgbrasil.com/weather?format=json-cors&key=31434b6e&user_ip=remote', options);
     const json = await response.json();
-    tempo.innerHTML = `Temperatura atual  ${json.results.city_name}  (${json.results.temp})°C`;
+    tempo.innerHTML = `Temperatura atual  ${json.results.city_name}  (${json.results.temp})°C <p class=clima>${json.results.description}</p><p class=clima>Umidade ${json.results.humidity}%</p>`;
     for(let i = 1; i < json.results.forecast.length - 1; i++){
         const div = document.createElement('div');
         div.setAttribute('class', 'container');
@@ -77,7 +77,7 @@ botao.addEventListener('click', async (e) =>{
     }
     const response = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=31434b6e&city_name=${search}`, options);
     const json = await response.json();
-    tempo.innerHTML = `Tempo atual ${json.results.city_name}  (${json.results.temp})°C`;
+    tempo.innerHTML = `Temperatura atual  ${json.results.city_name}  (${json.results.temp})°C<br><p class=clima>${json.results.description}</p><br><p class=att>Velocidade do Vento ${json.results.wind_speedy}<br>Probabilidade de Chuva ${json.results.rain_probability}%</p>`;
     for(let i = 1; i < json.results.forecast.length - 1; i++){
         const div = document.createElement('div');
         div.setAttribute('class', 'container');

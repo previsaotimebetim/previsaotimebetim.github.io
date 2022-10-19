@@ -104,6 +104,16 @@ p.att{
     font-weight: bold;
 }
 
+p.clima{
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    color: #f8f8f8;
+    font-size: 0.5em;
+    font-weight: 400;
+    font-style: italic;
+}
+
 @media(min-width: 1200px){
     main{
         width: 100%;
