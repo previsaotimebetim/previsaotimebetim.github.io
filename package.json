@@ -1,16 +1,27 @@
 {
   "name": "tempo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Consumo de uma API de previsão do tempo da HG Brasil.<br> <h2>Tecnologias utilizadas</h2> <ul>   <li>     JavaScript   </li>   <li>     HTML   </li>   <li>     SCSS   </li> </ul> <h2>Link no github pages</h2> https://previsaotimebetim.github.io/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "sass --watch ./assets/scss:./assets/css --style compressed --no-source-map"
+    "dev": "sass --watch ./assets/scss:./assets/css --style compressed --no-source-map"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.55.0"
-  }
+    "mysql2": "^2.3.3",
+    "sass": "^1.55.0",
+    "sequelize": "^6.25.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvaalexsander/Previsao-Do-tempo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/silvaalexsander/Previsao-Do-tempo/issues"
+  },
+  "homepage": "https://github.com/silvaalexsander/Previsao-Do-tempo#readme"
 }
